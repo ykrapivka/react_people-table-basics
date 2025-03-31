@@ -17,7 +17,9 @@ export const PersonComponent: React.FC<Props> = ({ person, people }) => {
 
     if (mother) {
       return <PersonLink person={mother} />;
-    } else if (person.motherName) {
+    }
+
+    if (person.motherName) {
       return person.motherName;
     }
 
@@ -29,7 +31,9 @@ export const PersonComponent: React.FC<Props> = ({ person, people }) => {
 
     if (father) {
       return <PersonLink person={father} />;
-    } else if (person.fatherName) {
+    }
+
+    if (person.fatherName) {
       return person.fatherName;
     }
 
